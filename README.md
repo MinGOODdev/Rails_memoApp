@@ -46,17 +46,17 @@ header를 부품으로 _header로 만들어서 partial로 사용.
 
 
 
-### 기타 사항
-# heroku run rake db:migrate
+# 기타 사항
+## heroku run rake db:migrate
 헤로쿠에서 db migrate 하는 법
 
-# rake notes
+## rake notes
 <% TODO: anything %>
 
-# rake routes
+## rake routes
 rails가 지어주는 path 이름을 알 수 있다.
 
-# Editor (tinymce_rails) 사용 방법
+## Editor (tinymce_rails) 사용 방법
 1. gem 'tinymce_rails' bundle install
 2. config 폴더에 tinymce.yml 생성
 3. tinymce.yml 파일에 내용 추가
