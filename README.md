@@ -44,6 +44,10 @@ gem 'devise-bootstrap-views' install
 ## <%= render 'layouts/header' %>
 header를 부품으로 _header로 만들어서 partial로 사용.
 
+## debugger
+As java, breakpoint
+you want to continue, ctrl + d
+
 
 
 # 기타 사항
@@ -62,3 +66,7 @@ rails가 지어주는 path 이름을 알 수 있다.
 3. tinymce.yml 파일에 내용 추가
 4. app/assets/javascripts/application.js 에 아래 내용 추가
 5. //= require tinymce-jquery
+
+## gem 'pry' & 'pry-rails'
+1. rails console upgrade for User
+2. rails c -s을 사용하면 실제 DB상에는 적용되지 않고 콘솔상에서만 테스트할 수 있다.

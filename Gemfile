@@ -11,6 +11,8 @@ gem 'devise-bootstrap-views'
 #게시판 Editor
 gem 'tinymce-rails'
 
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use SCSS for stylesheets
@@ -45,8 +47,12 @@ group :development, :test do
   gem 'byebug'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  
+  # Rails Database
   gem 'rails_db'
+  
+  # Upgrade Rails Console
+  gem 'pry'
+  gem 'pry-rails'
 end
 
 group :development do
