@@ -1,11 +1,9 @@
 <h1><%= @memo.title %></h1>
 <hr/>
 <h2>by <%= @memo.user.email %></h2>
-<h3>
-    <%# FIXME: icon helper %>
-    <span class="glyphicon glyphicon-time"></span>
-    <%= local_time(@memo.created_at) %>
-</h3>
+<h3><%= icon 'time' %><%= local_time(@memo.created_at) %></h3>
+<%# TODO: 로그인한 사람이 글 작성자면 활성화 %>
+<%= icon 'pencil' %> | <%= icon 'trash' %>
 <hr/>
     <%= @memo.content.html_safe %>
 <hr/>

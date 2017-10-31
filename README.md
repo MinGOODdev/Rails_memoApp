@@ -33,7 +33,6 @@ gem 'devise-bootstrap-views' install
 2. @import "rails_bootstrap_forms"; 선언
 
 
-
 # 조금 더 고급진 Ruby on Rails
 ## <%= link_to 'text', root_path %>
 1. html의 a 태그를 대체하는 것이라고 생각하면 쉽다.
@@ -67,7 +66,9 @@ rails가 지어주는 path 이름을 알 수 있다.
 4. app/assets/javascripts/application.js 에 아래 내용 추가
 5. //= require tinymce-jquery
 
-## 콘솔을 업그레이드? 해보자
 ## gem 'pry' & 'pry-rails'
 1. rails console upgrade for User
 2. rails c -s을 사용하면 실제 DB상에는 적용되지 않고 콘솔상에서만 테스트할 수 있다.
+
+## gem 'local_time' (created_at 시간 조금 더 이쁘게 나오게 하기)
+1. ex> <%= local_time(@memo.created_at) %>
