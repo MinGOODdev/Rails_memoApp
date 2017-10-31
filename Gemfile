@@ -11,8 +11,11 @@ gem 'devise-bootstrap-views'
 #게시판 Editor
 gem 'tinymce-rails'
 
-# time format
+#Time format
 gem 'local_time'
+
+#Pagination
+gem 'kaminari'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

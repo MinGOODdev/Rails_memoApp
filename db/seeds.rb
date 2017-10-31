@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+100.times do |i|
+  Memo.create!(title: "#{i+1}번째 글입니다.", content: "Hack Your Life!", user_id: 1)
+end

@@ -22,7 +22,8 @@ class MemosController < ApplicationController
   end
   
   def index
-    
+    # binding.pry
+    @memos = Memo.order(created_at: :DESC).page(params[:page]).per(10)
   end
   
   # Update
