@@ -2,22 +2,22 @@ Warming Up For Flash Message
 copyright LikeLion at SKHU
 Jo Min Kuk & Park So Hee
 
-#Explane Start
+Explane Start
 
 ## gem 'devise'
 1. bundle
 2. rails g devise:install
 3. rails g devise MODEL(User)
 4. rails g devise:views
-but, no beautiful
-5. rails d devise:views
-6. rails g devise:views:bootstrap_templates
-yes, beautiful
+5. but, no beautiful
+6. rails d devise:views
+7. rails g devise:views:bootstrap_templates
+8. yes, beautiful
 
-## Instead of CDN, 'bootstrap-sass' for devise
+## CDN 대신 gem 'bootstrap-sass' 를 사용한다.
 gem 'bootstrap-sass', '~> 3.3.6' install
 
-## How to use 'bootstrap-sass'
+## gem 'bootstrap-sass' 사용법
 1. app/assets/javascripts/application.js
 2. //= require bootstrap-sprockets 추가
 3. app/assets/stylesheets/custom.scss 생성
@@ -25,16 +25,16 @@ gem 'bootstrap-sass', '~> 3.3.6' install
 5. @import "bootstrap-sprockets";
 6. @import "bootstrap";
 
-## How to use devise:views:bootstrap_templates
+## 'devise:views:bootstrap_templates' 사용법
 gem 'devise-bootstrap-views' install
 
-## How to use 'bootstrap_form'
+## 'bootstrap_form' 사용법
 1. app/assets/stylesheets/custom.scss
 2. @import "rails_bootstrap_forms"; 선언
 
 
 
-# For High Quality Ruby on Rails
+# 조금 더 고급진 Ruby on Rails
 ## <%= link_to 'text', root_path %>
 1. html의 a 태그를 대체하는 것이라고 생각하면 쉽다.
 2. Ex)
@@ -67,6 +67,7 @@ rails가 지어주는 path 이름을 알 수 있다.
 4. app/assets/javascripts/application.js 에 아래 내용 추가
 5. //= require tinymce-jquery
 
+## 콘솔을 업그레이드? 해보자
 ## gem 'pry' & 'pry-rails'
 1. rails console upgrade for User
 2. rails c -s을 사용하면 실제 DB상에는 적용되지 않고 콘솔상에서만 테스트할 수 있다.

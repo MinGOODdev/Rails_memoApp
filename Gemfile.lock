@@ -90,6 +90,7 @@ GEM
       activerecord
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
+    local_time (2.0.0)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.6)
@@ -217,6 +218,7 @@ DEPENDENCIES
   devise-bootstrap-views
   jbuilder (~> 2.0)
   jquery-rails
+  local_time
   pg
   pry
   pry-rails
