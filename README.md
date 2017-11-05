@@ -1,5 +1,14 @@
 # Copyright LikeLion at SKHU (Jo Min Kuk & Park So Hee)
 
+## 샘플 설명
+1. 게시판 CRUD
+2. 댓글 CRD
+3. controller에서 before_action을 활용해 반복 제거 (private 이용)
+4. memos_helper에서 icon method 만들어서 활용
+5. Rails, resourceful route 활용
+6. 기능별 권한 설정 추가
+7. validation 추가
+
 ## Flash Message를 하기 위해 샘플을 만들자.
 ## 다 만들어 놓았으니 아래대로만 따라해라.
 1. bundle
