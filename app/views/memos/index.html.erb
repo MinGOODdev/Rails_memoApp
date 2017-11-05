@@ -13,7 +13,7 @@
       <tr>
         <td><%= link_to memo.title, memo_path(memo) %></td>
         <td><%= memo.user.email %></td>
-        <td><%# TODO: comment count %></td>
+        <td><%= memo.comments.count %></td>
       </tr>
       <% end %>
     </tbody>

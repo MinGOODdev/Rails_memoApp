@@ -1,6 +1,8 @@
 class MemosController < ApplicationController
   # 로그인 user 권한 검사
+  # TODO: User login과 결합하기.
   # before_action :authenticate_user!, except: [:show, :index]
+  
   # @memo = Memo.find(params[:id])를 대체하기 위한 코드
   before_action :set_memo, only: [:show, :edit, :update, :destroy]
   
@@ -24,6 +26,8 @@ class MemosController < ApplicationController
   # Retrieve
   def show
     # @memo = Memo.find(params[:id])
+    @comment = Comment.new
+    @comments = @memo.comments
   end
   
   def index

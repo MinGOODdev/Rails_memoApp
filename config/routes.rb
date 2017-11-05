@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   # Retrieve = Get
   # Update = Patch
   # Destroy = Delete
-  resources :memos
+  resources :memos do
+    resources :comments, only: [:create, :destroy]
+  end
   
   root 'memos#index'
   devise_for :users
