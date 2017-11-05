@@ -1,16 +1,13 @@
-# Copyright LikeLion at SKHU
-# Jo Min Kuk & Park So Hee
+# Copyright LikeLion at SKHU (Jo Min Kuk & Park So Hee)
 
-
-# Flash Message를 하기 위해 샘플을 만들자.
-# 다 만들어 놓았으니 아래대로만 따라해라.
+## Flash Message를 하기 위해 샘플을 만들자.
+## 다 만들어 놓았으니 아래대로만 따라해라.
 1. bundle
 2. rake db:migrate
 3. 끝.
 
 
-# 샘플을 직접 구현하기 위한 순서 설명
-
+## 샘플을 직접 구현하기 위한 순서 설명
 ## Bootstrap과 관련된 gem 부터 설치한다.
 ### 1st, 'bootstrap-sass' gem
 1. CDN 대신 gem을 사용한다.
