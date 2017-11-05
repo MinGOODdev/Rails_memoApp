@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  efore_action :authenticate_user!
+  before_action :authenticate_user!
   before_action :set_comment, only: [:destroy]
   before_action :is_owner?, only: [:destroy]
   
