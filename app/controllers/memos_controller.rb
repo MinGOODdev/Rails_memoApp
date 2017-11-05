@@ -1,10 +1,9 @@
 class MemosController < ApplicationController
   # 로그인 user 권한 검사
-  # TODO: User login과 결합하기.
-  # before_action :authenticate_user!, except: [:show, :index]
-  
+  before_action :authenticate_user!, except: [:show, :index]
   # @memo = Memo.find(params[:id])를 대체하기 위한 코드
   before_action :set_memo, only: [:show, :edit, :update, :destroy]
+  before_action :is_owner?, only: [:edit, :update, :destroy]
   
   # Create
   def new
@@ -38,6 +37,9 @@ class MemosController < ApplicationController
   # Update
   def edit
     # @memo = Memo.find(params[:id])
+    unless current_user == @memo.user
+      redirect_to memo_path
+    end
   end
   
   def update
@@ -69,6 +71,12 @@ class MemosController < ApplicationController
     def memo_params
       #Rails 4 Strong Parameter
       params.require(:memo).permit(:title, :content, :user_id)
+    end
+    
+    def is_owner?
+      unless current_user == @memo.user
+        redirect_to root_path
+      end
     end
   
 end
