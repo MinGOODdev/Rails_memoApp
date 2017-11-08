@@ -1,0 +1,51 @@
+[ _flash_message.html.erb ]
+<% flash.each do |msg_type, msg| %>
+    <% type = flash_msg(msg_type) %>
+    <%= content_tag(:div, msg, class: [‘alert’, “alert-#{type}”]) %>
+<% end %>
+
+[ application_helper.rb ]
+def flash_msg (type)
+    result = 
+    case type
+      when ‘notice’ then ‘success’
+      when ‘alert’ then ‘danger’
+      when ‘danger’ then ‘danger’
+      else ‘info’
+    end
+end
+
+[ memos_controller.rb (create) ]
+def create
+	@memo = Memo.new(memo_params)
+	if @memo.save
+	   flash[:notice] = ‘메모 작성 성공‘
+	   redirect_to @memo
+	else
+	   flash[:danger] = ‘메모 작성 실패‘
+	   render :new
+	end
+end
+
+[ memos_controller.rb (update) ]
+def update
+	if @memo.update(memo_params)
+	   flash[:notice] = ‘메모 수정 성공‘
+	   redirect_to @memo
+	else
+	   flash[:danger] = ‘메모 수정 실패‘
+	   render :edit
+	end
+end
+
+[ comments_controller.rb (create) ]
+def create
+	@comment = Comment.new(comment_params)
+	if @comment.save
+	   flash[:notice] = ‘댓글 작성 성공‘
+	   redirect_to @memo_path(params[:memo_id])
+	else
+	   flash[:danger] = ‘댓글 작성 실패‘
+	   redirect_to :back
+	end
+end
